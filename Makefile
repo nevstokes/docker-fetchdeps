@@ -1,4 +1,4 @@
-DOCKER_REPO = nevstokes/fetchdeps
+IMAGE_NAME = nevstokes/fetchdeps
 
 export
 
