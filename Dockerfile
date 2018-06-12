@@ -4,8 +4,9 @@ FROM alpine:3.7 AS src
 ONBUILD RUN apk --update-cache upgrade && update-ca-certificates
 
 RUN echo '@community http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories \
+    && echo '@edge http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories \
     && apk --update-cache upgrade && apk add --no-cache \
-        axel \
+        axel@edge \
         ca-certificates \
         gnupg \
         upx@community \
